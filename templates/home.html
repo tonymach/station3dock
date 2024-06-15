@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station3Task - Motor Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Station3 - Manage Participants</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Participants List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Sessions Completed / Total</th>
+                            <th>View Sessions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for participant in participants %}
+                        <tr>
+                            <td>{{ participant.id }}</td>
+                            <td>{{ participant.name }}</td>
+                            <td>{{ participant.email }}</td>
+                            <td>{{ participant.completed_sessions }} / {{ participant.total_sessions }}</td>
+                            <td>
+                                <a href="{{ url_for('view_session', participant_id=participant.id) }}">Sessions</a>
+                            </td>
+                            <td>
+                                <a href="{{ url_for('update_session', session_id=session.id) }}">Edit Session</a>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="5">No participants found.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Station3 - Motor Lab</p>
+        </footer>
+    </div>
+</body>
+</html>

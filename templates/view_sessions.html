@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Sessions - Station3Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sessions for {{ participant.name }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Session Type</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Score</th>
+                <th>Paperwork Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for session in sessions %}
+            <tr>
+                <td>{{ session.session_type }}</td>
+                <td>{{ session.start_time }}</td>
+                <td>{{ session.end_time }}</td>
+                <td>{{ session.score }}</td>
+                <td>{{ 'Yes' if session.paperwork_completed else 'No' }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5">No sessions found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('hello') }}">Back to Participant List</a>
+</body>
+</html>

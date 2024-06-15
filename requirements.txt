@@ -1,3 +1,7 @@
-flask
 flask-sqlalchemy
 flask-migrate
+flask
+jinja2
+flask-wtf 
+wtforms
+email-validator

@@ -1,0 +1,112 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Basic body styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, geometric font */
+    background-color: #ffffff; /* Bright white background */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #f8f8f8; /* Light grey background */
+    color: #0a8ecd; /* Light blue for a vibrant, digital feel */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 2px solid #0a8ecd; /* Light blue underline */
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(10, 140, 205, 0.1); /* Subtle blue glow */
+}
+
+/* Subtle animations for all interactive elements */
+*, *:focus, *:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Section styles */
+section {
+    background-color: transparent; /* Use a transparent background for sections */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #0a8ecd; /* Light blue side border for emphasis */
+    color: #666; /* Soft gray for text */
+}
+
+/* Headings styled with a futuristic feel */
+h1, h2, h3, h4, h5, h6 {
+    color: #0a8ecd;
+    font-weight: 600;
+}
+
+/* Styling for forms and inputs */
+label {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="email"] {
+    background-color: #f0f0f0; /* Very light grey, nearly white */
+    color: #333;
+    border: 1px solid #0a8ecd; /* Light blue border */
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0a8ecd; /* Light blue buttons */
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(10, 140, 205, 0.2);
+}
+
+button:hover {
+    background-color: #007bbd; /* A slightly darker blue on hover */
+    box-shadow: 0 3px 10px rgba(10, 140, 205, 0.3);
+}
+
+/* Footer with fixed positioning at the bottom */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f8f8;
+    color: #0a8ecd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    border-top: 2px solid #0a8ecd;
+}
+
+/* Table styling for data presentation */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee; /* Subtle line for separation */
+}
+
+th {
+    background-color: #f8f8f8;
+}
